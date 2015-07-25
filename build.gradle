@@ -1,0 +1,28 @@
+apply plugin:'java'
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+version = "1.0"
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        include 'plugin.yml'
+        expand 'version':project.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'plugin.yml'
+    }
+}
+
+repositories {
+   flatDir {
+       dirs 'lib'
+   }
+}
+
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+	compile project(':mProtectPlugin')
+}
