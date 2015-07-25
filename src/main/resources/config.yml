@@ -1,0 +1,11 @@
+# Language files is inside of jar file
+language: en
+
+issuesPerPage: 10
+server: -1
+
+driver: sql
+sql:
+    dsn: jdbc:mysql://localhost:3306/minecraft
+    user: root
+    password: ololo

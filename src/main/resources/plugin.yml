@@ -1,0 +1,10 @@
+name: JetShop
+version: 1.0
+author: Nero
+softdepend: [PermissionsEx, WorldEdit, WorldGuard] 
+website: http://justnero.ru/
+main: ru.justnero.minecraft.bukkit.shop.Bootstrap
+commands:
+    shop:
+        usage: /shop [different arguments]
+        description: Command for all user actions
